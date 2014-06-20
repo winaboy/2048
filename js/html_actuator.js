@@ -8,6 +8,8 @@ function HTMLActuator() {
   this.score = 0;
 }
 
+var words = ["贝", "贝", "酱", "最", "好", "啦", "！" ];
+
 HTMLActuator.prototype.actuate = function (grid, metadata) {
   var self = this;
 
@@ -67,7 +69,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = tile.value;
+  inner.textContent = words[tile.value];
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
