@@ -6,9 +6,9 @@ function HTMLActuator() {
   this.sharingContainer = document.querySelector(".score-sharing");
 
   this.score = 0;
+  this.words = ["贝", "贝", "酱", "最", "好", "啦", "!"];
+  this.wordsLength = this.words.length;
 }
-
-var words = ["贝", "贝", "酱", "最", "好", "啦", "！" ];
 
 HTMLActuator.prototype.actuate = function (grid, metadata) {
   var self = this;
@@ -69,7 +69,7 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = words[tile.value];
+  inner.textContent = this.words[tile.value];
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first
@@ -133,7 +133,7 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "You win!" : "Game over!";
+  var message = won ? "贝贝酱，你都是最好的啦，你还要追求什么？！" : "再试试，这应该是超低难度才对：）";
 
   if (typeof ga !== "undefined") {
     ga("send", "event", "game", "end", type, this.score);
