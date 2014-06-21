@@ -227,9 +227,11 @@ hr {
   .game-message p {
     font-size: 60px;
     font-weight: bold;
-    height: 60px;
+    height: 180px;
     line-height: 60px;
-    margin-top: 222px; }
+    margin-top: 222px;
+    color: darkred;
+  }
   .game-message .lower {
     display: block;
     margin-top: 29px; }
