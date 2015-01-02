@@ -6,7 +6,7 @@ function HTMLActuator() {
   this.sharingContainer = document.querySelector(".score-sharing");
 
   this.score = 0;
-  this.words = ["贝", "贝", "酱", "最", "好", "啦", "!"];
+  this.words = ["和", "家", "新", "年", "快", "了", "!"];
   this.wordsLength = this.words.length;
 }
 
